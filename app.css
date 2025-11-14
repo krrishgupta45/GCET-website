@@ -1,0 +1,559 @@
+/*
+==============THE-STYLE-GUIDE============== 
+
+---------- TYPOGRAPHY ----------
+
+SCALE-MAJOR-THIRD
+1.250
+
+
+FONT SIZES
+12px / 16px / 20px / 24px / 32px / 40px / 48px / 62px
+
+FONT WEIGHTS
+400 / 700
+
+LINE HEIGHTS
+1.2 / 1.5
+
+LETTER SPACING
+0 / -2px
+
+FONT FAMILY
+Poppins
+
+---------- COLORS ----------
+
+PRIMARY
+Base: #339af0 (Sky Blue)
+Tint: #d0ebff (Arctic)
+Shade: #1c7ed6 (Deep Sea)
+
+SECONDARY
+Base: #9775fa (Lavendar)
+Tint: #e5dbff (Moonligh Iris)
+Shade: #7048e8 (Velvet Night)
+
+TERTIARY
+Base: #ff922b (Pumpkin)
+Tint: #ffe8cc (Dawn)
+Shade: #f76707 (Lava)
+
+GREY
+Base: #495057 (Slate)
+Tint: #f1f3f5 (Pebble)
+Shade: #212529 (Graphite)
+White: #ffffff (White)
+Black: #000000 (Black)
+
+---------- BORDER RADIUS ----------
+
+4px / 8px / 20px
+
+---------- SPACING SYSTEM ----------
+
+5px / 10px / 15px / 20px / 25px / 30px / 40px / 50px / 60px / 70px / 80px / 90px / 100px / 125px / 150px / 200px / 250px / 300px / 400px / 500px
+*/
+
+/* ----------------------- GLOBAL STYLES ----------------------- */
+
+:root {
+    /* FONT SIZE */
+    --text-sm: 1.2rem;
+    --text-base: 1.6rem;
+    --text-paragraph: 2rem;
+    --text-h5: 2.4rem;
+    --text-h4: 3.2rem;
+    --text-h3: 4rem;
+    --text-h2: 4.8rem;
+    --text-h1: 6.2rem;
+
+    /* FONT WEIGHT */
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+
+    /* LINE HEIGHTS */
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.5;
+
+    /* LETTER SPACING */
+    --letter-spacing-tight: -2px;
+
+    /* FONT FAMILY */
+    --font-family: 'Poppins', sans-serif;
+
+    /* COLORS */
+    --primary-base: #339af0;
+    --primary-tint: #d0ebff;
+    --primary-shade: #1c7ed6;
+    --secondary-base: #9775fa;
+    --secondary-tint: #e5dbff;
+    --secondary-shade: #7048e8;
+    --tertiary-base: #ff922b;
+    --tertiary-tint: #ffe8cc;
+    --tertiary-shade: #f76707;
+    --grey-base: #495057;
+    --grey-tint: #f1f3f5;
+    --grey-shade: #212529;
+    --white: #ffffff;
+    --black: #000000; 
+    
+    /* MISCELLANEOUS */
+    --nav-height: 100px; /* Update the value in the flexbox topic */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+   font-size: 62.5%; 
+   /* 10px / 16px = 62.5% */
+}
+body {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-normal);
+    line-height: var(--line-height-normal);
+    color: var(--grey-base);
+}
+
+.container {
+    max-width: 1250px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+    letter-spacing: var(--letter-spacing-tight);
+    color: var(--grey-shade);
+}
+
+h1 {
+    font-size: var(--text-h1);
+}
+
+h2 {
+    font-size: var(--text-h2);
+}
+
+h3 {
+    font-size: var(--text-h3);
+}
+
+h4 {
+    font-size: var(--text-h4);
+}
+
+h5 {
+    font-size: var(--text-h5);
+}
+
+p {
+    font-size: var(--text-paragraph);
+}
+
+a {
+    text-decoration: none;
+    font-size: var(--text-base);
+    display: inline-block;
+}
+
+ul {
+    list-style: none;
+}
+
+span {
+    display: inline-block;
+}
+
+/* Login page is desgined from hbere onwards */
+.login-container{
+    max-width: 1250px;
+    height: 100vh;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.login-section-1{
+  display: flex;
+  flex-direction: column;
+}
+
+.login-section-2{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+  border-radius: 15px;
+  width: 396px;
+}
+
+.login-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid #dadde1;
+  padding: 10px;
+  
+}
+.login-button{
+  display: inline-block;
+  width: 366px;
+  text-align: center;
+  padding: 12px 24px;
+  font-size: 1.6rem;
+  color: #ffffff;
+  background-color: var(--primary-shade);
+ border-radius: 15px;
+}
+
+.login-pwd-button{
+  color: #0866FF;
+}
+
+.ca1{
+    display: inline-block;
+  text-align: center;
+  padding: 12px 24px;
+  font-size: 1.6rem;
+  color: #ffffff;
+  background-color: var(--primary-shade);
+ border-radius: 15px;
+}
+input{
+  padding: 10px;
+font-size: var(--text-paragraph);
+color:var(--grey-shade);
+width: 370px;
+border: 1.5px solid  #dadde1;
+border-radius: 6px;
+}
+
+/* MAIN WEBSITE STARTS FROM HERE ABOVE ALL ARE CSS RESETS AND DEFAULT BEHAVIOURS */
+
+.navbar1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.minicontainer1{
+  display: flex;
+}
+
+.login-btn{
+    display: inline-block;
+    font-size: var(--text-base);
+    padding: 1.5rem 3rem;
+    border-radius: 15px;
+    color: var(--white);
+    background-color: var(--secondary-shade);
+    border: 2px solid var(--secondary-shade);
+    transition: 0.5s;
+}
+
+.login-btn:hover{
+    color: var(--white);
+    background-color: var(--secondary-shade);
+    border: 2px solid var(--secondary-shade);
+    transform: scale(1.05, 1.05);
+    box-shadow: 0px 3px 6px var(--grey-base);
+}
+
+
+/* MAIN-SECTION CONTAINER IS THIS FROM HERE THE MAIN CONTECT SHOW STARTS */
+.section-container{
+    max-width: 1050px;
+    width: 95%;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar2{
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    border-bottom: 1px solid #dadde1;
+
+}
+
+.nav-button{
+    padding: 15px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    border: none;
+    border-radius: 15px;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+    color: var(--grey-shade);
+    background:var(--white);
+}
+
+.nav-svg{
+    width: 2rem;
+}
+/* THE MAIN CONTENT SECTION IS DESGINED FROM HERE ONWARDS */
+.home-container,.notifications-container{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.explore-btn{
+    display: inline-block;
+    font-size: var(--text-base);
+    padding: 1.5rem 3rem;
+    border-radius: 8px;
+    color: var(--white);
+    background-color: var(--primary-shade);
+    border: 2px solid var(--primary-shade);
+    transition: 0.5s;
+    margin: 2rem;
+}
+
+.cards{
+    display: flex;
+    gap: 15px;
+    margin-top: 3rem;
+}
+
+.cardx{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 10px;
+padding: 15px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+border-radius: 15px;
+max-width: 450px;
+width: 90%;
+}
+
+/* From here we start coding and designing the notifications container  */
+
+.subcontainer3{
+  margin: 2rem auto;
+  padding: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 15px;
+
+}
+
+.notifyinfo{
+  padding: 1.4rem;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 0.25fr 1.5fr 0.25fr;
+
+}
+
+.notifytxt{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px black solid; */
+  font-size: 1.2rem;
+  font-family: var(--font2);
+  font-weight: 550;
+  text-align: center;
+  color: var(--secondary-base);
+}
+
+.notifyinfo:hover{ 
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+} 
+
+.hdrs{
+  
+  display: grid;
+  grid-template-columns: 0.25fr 1.5fr 0.25fr;
+  text-align: center;
+}
+
+.hdrstxt{
+  /* border: 1px black solid; */
+  font-size: 1.6rem;
+  font-family: var(--font1);
+  font-weight: 900;
+  color: var(--grey-base);
+}
+
+/* From here we start coding and designing the  container  */
+.event-card{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    padding: 15px;
+    border-radius: 15px;
+
+}
+
+
+.photo-gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 5px;
+    column-gap: 5px;
+}
+
+.photo-gallery img{
+    max-width: 33rem;
+    width: 100%;
+    border-radius: 15px;
+}
+/* From here we start coding and designing the About us container  */
+.aboutUs-container{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* From here we start coding and designing the Profile container  */
+.minicontainer2{
+  display: flex;
+ justify-content: center;
+ align-items: center;
+  margin-right: 4rem;
+  gap: 0.5rem;
+  /* border-radius: 15px;
+ box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+
+}
+
+.usericon{
+  width: 2.5rem;
+}
+
+.usertext{
+  font-size: 2rem;
+}
+
+/* -------------------------Sub container2------------------ */
+.subcontainer2{
+  width: 90%;
+  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 1rem;
+  column-gap: 1rem;
+}
+
+.infobox,.exambox,.restbox,.creditbox{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.infobox{
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+
+
+.exambox{
+  grid-row: 1/2;
+  grid-column: 2/3;
+}
+
+.restbox{
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+
+.creditbox{
+  grid-row: 2/3;
+  grid-column: 2/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.integer{
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px black solid;
+  gap: 0.8rem;
+  font-size: 2rem;
+  color: var(--grey-shade);
+
+
+}
+
+.int,.int1{
+  display: flex;
+  gap: 0.8rem;
+  padding: 1rem;
+  border-bottom: 1px black solid;
+}
+
+.integer:hover{
+    transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.int1{
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font1);
+  padding: 0;
+  font-size: 3rem;
+}
+
+.intimg{
+  width: 2.4rem;
+}
+
+.btn{
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border-radius: 15px;
+  font-size: 2rem;
+}
+.btn1{
+  font-family: var(--font1);
+  margin: 1.5rem;
+  color: var(--white);
+  background-color: var(--midnightblue);
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.btn1:hover{
+      transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.h1txt{
+font-size: 3rem;
+}
+
+.h2txt{
+  font-size: 2.5rem;
+}
+
+.creditbox a{
+    color: var(--grey-shade);
+}
+
