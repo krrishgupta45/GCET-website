@@ -284,6 +284,9 @@ border-radius: 6px;
     justify-content: space-between;
     gap: 25px;
     border-bottom: 1px solid #dadde1;
+    position:sticky;
+    top:0;
+    background-color:white;
 
 }
 
@@ -556,4 +559,5 @@ font-size: 3rem;
 .creditbox a{
     color: var(--grey-shade);
 }
+
 
