@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($email == $correctEmail && $password == $correctPassword) {
         // Redirect on success
-        header("Location: index.php");
+        header("Location: index.html");
         exit();
     } else {
         $error = "Invalid email or password!";
@@ -71,5 +71,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   </div>
 </body>
 </html>
+
 
 
